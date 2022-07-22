@@ -14,28 +14,20 @@ func PingSearchEngines(opts *Options, urls ...string) {
 	}...)
 	sitemapURL := opts.IndexLocation().URL()
 
-	bufs := len(urls)
-	does := make(chan string, bufs)
 	client := http.Client{Timeout: time.Duration(5 * time.Second)}
 
 	for _, url := range urls {
 		go func(baseurl string) {
 			url := fmt.Sprintf(baseurl, sitemapURL)
-			println("Ping now:", url)
 
 			resp, err := client.Get(url)
 			if err != nil {
-				does <- fmt.Sprintf("[E] Ping failed: %s (URL:%s)",
+				fmt.Printf("[E] Ping failed: %s (URL:%s)\n",
 					err, url)
 				return
 			}
 			defer resp.Body.Close()
-
-			does <- fmt.Sprintf("Successful ping of `%s`", url)
 		}(url)
 	}
 
-	for i := 0; i < bufs; i++ {
-		println(<-does)
-	}
 }
