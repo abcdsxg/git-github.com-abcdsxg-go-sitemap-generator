@@ -4,13 +4,13 @@ A go-sitemap-generator is the easiest way to generate Sitemaps in Go.
 As of version 2.0.0, This Repo is available as a [Go module](https://github.com/golang/go/wiki/Modules).
 
 
-[![GoDoc](https://godoc.org/github.com/ikeikeikeike/go-sitemap-generator/stm?status.svg)](https://godoc.org/github.com/ikeikeikeike/go-sitemap-generator/stm) [![Build Status](https://travis-ci.org/ikeikeikeike/go-sitemap-generator.svg)](https://travis-ci.org/ikeikeikeike/go-sitemap-generator)
+[![GoDoc](https://godoc.org/github.com/abcdsxg/go-sitemap-generator/stm?status.svg)](https://godoc.org/github.com/abcdsxg/go-sitemap-generator/stm) [![Build Status](https://travis-ci.org/abcdsxg/go-sitemap-generator.svg)](https://travis-ci.org/abcdsxg/go-sitemap-generator)
 
 ```go
 package main
 
 import (
-	"github.com/ikeikeikeike/go-sitemap-generator/v2/stm"
+	"github.com/abcdsxg/go-sitemap-generator/v2/stm"
 )
 
 
@@ -38,8 +38,8 @@ $ go build
 #### Installation (Legacy download instead of a [Go module](https://github.com/golang/go/wiki/Modules).)
 
 ```console
-$ go get gopkg.in/ikeikeikeike/go-sitemap-generator.v1/stm
-$ go get gopkg.in/ikeikeikeike/go-sitemap-generator.v2/stm
+$ go get gopkg.in/abcdsxg/go-sitemap-generator.v1/stm
+$ go get gopkg.in/abcdsxg/go-sitemap-generator.v2/stm
 ```
 
 ### Features
@@ -124,14 +124,14 @@ sm.SetFilename("new_filename")
 
 ### Upload sitemap to S3
 
-Recently I disabled this module [here](https://github.com/ikeikeikeike/go-sitemap-generator/blob/master/stm/_adapter_s3.go).
+Recently I disabled this module [here](https://github.com/abcdsxg/go-sitemap-generator/blob/master/stm/_adapter_s3.go).
 
 ```go
 package main
 
 import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/ikeikeikeike/go-sitemap-generator/stm"
+	"github.com/abcdsxg/go-sitemap-generator/stm"
 )
 
 func main() {
@@ -250,7 +250,7 @@ Look at [Feature phone sitemaps](https://support.google.com/webmasters/answer/60
 package main
 
 import (
-	"github.com/ikeikeikeike/go-sitemap-generator/stm"
+	"github.com/abcdsxg/go-sitemap-generator/stm"
 )
 
 func main() {
@@ -324,7 +324,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ikeikeikeike/go-sitemap-generator/stm"
+	"github.com/abcdsxg/go-sitemap-generator/stm"
 )
 
 func buildSitemap() *stm.Sitemap {
@@ -357,7 +357,7 @@ func main() {
 
 ### Documentation
 
-- [API Reference](https://godoc.org/github.com/ikeikeikeike/go-sitemap-generator/stm)
+- [API Reference](https://godoc.org/github.com/abcdsxg/go-sitemap-generator/stm)
 - [sitemap_generator](http://github.com/kjvarga/sitemap_generator)
 
 ### How to test.
